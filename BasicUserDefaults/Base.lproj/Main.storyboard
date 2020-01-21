@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicUserDefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harper" translatesAutoresizingMaskIntoConstraints="NO" id="XrW-rx-oND">
+                                <rect key="frame" x="107.66666666666669" y="146" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="DmB-ZB-Ny7"/>
+                                    <constraint firstAttribute="width" constant="160" id="LWN-6x-JWI"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-cK-C8B">
+                                <rect key="frame" x="30" y="84" width="315" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="lwE-YW-71S"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <color key="tintColor" red="0.35092192890000001" green="0.80254727599999998" blue="0.94894403220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="didChangeStyleSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="phh-7A-IWL"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="tI4-Ve-iFp" customClass="NameTextField" customModule="BasicUserDefaults" customModuleProvider="target">
+                                <rect key="frame" x="30" y="336" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hxv-mM-MWp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQc-JH-DOK" customClass="SAButton" customModule="BasicUserDefaults" customModuleProvider="target">
+                                <rect key="frame" x="30" y="406" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8aa-45-NTE"/>
+                                </constraints>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6RR-Z2-kqz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XrW-rx-oND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1le-mB-b2k"/>
+                            <constraint firstItem="QQc-JH-DOK" firstAttribute="top" secondItem="tI4-Ve-iFp" secondAttribute="bottom" constant="20" id="4c7-ZH-rB2"/>
+                            <constraint firstAttribute="trailing" secondItem="8vg-cK-C8B" secondAttribute="trailing" constant="30" id="8Qf-dQ-c5V"/>
+                            <constraint firstItem="QQc-JH-DOK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="BmM-3U-Zt9"/>
+                            <constraint firstAttribute="trailing" secondItem="QQc-JH-DOK" secondAttribute="trailing" constant="30" id="YC8-av-Bip"/>
+                            <constraint firstItem="tI4-Ve-iFp" firstAttribute="top" secondItem="XrW-rx-oND" secondAttribute="bottom" constant="30" id="ZPG-Vw-Jmf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tI4-Ve-iFp" secondAttribute="trailing" constant="30" id="fbF-W1-caf"/>
+                            <constraint firstItem="tI4-Ve-iFp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="lBC-0Y-yb1"/>
+                            <constraint firstItem="8vg-cK-C8B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ptl-fu-xKl"/>
+                            <constraint firstItem="8vg-cK-C8B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="sFx-OP-iJp"/>
+                            <constraint firstItem="XrW-rx-oND" firstAttribute="top" secondItem="8vg-cK-C8B" secondAttribute="bottom" constant="30" id="tbW-IF-vbJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="tI4-Ve-iFp" id="W0j-VE-gb0"/>
+                        <outlet property="petImageView" destination="XrW-rx-oND" id="oQJ-cF-YVv"/>
+                        <outlet property="styleSegmentedControl" destination="8vg-cK-C8B" id="rjw-Kc-GMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="harper" width="999.5" height="999.5"/>
+    </resources>
+</document>
